@@ -1,0 +1,15 @@
+{
+  "name": "devops-nodejs-k8s-cicd",
+  "version": "1.0.0",
+  "description": "Node.js DevOps project with Docker, Kubernetes, and CI/CD",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "author": "M Ali Zia",
+  "license": "MIT"
+}
