@@ -3,8 +3,8 @@ const os = require('os');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const APP_VERSION = process.env.APP_VERSION || '1.0.0';
-const APP_MESSAGE = process.env.APP_MESSAGE || 'Version 1 - Initial Deployment';
+const APP_VERSION = process.env.APP_VERSION || '2.0.0';
+const APP_MESSAGE = process.env.APP_MESSAGE || 'Version 2 - Deployed via GitHub Actions CI/CD! 🚀';
 
 let visitorCount = 0;
 
