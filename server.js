@@ -3,8 +3,8 @@ const os = require('os');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const APP_VERSION = process.env.APP_VERSION || '2.0.0';
-const APP_MESSAGE = process.env.APP_MESSAGE || 'Version 3 - Live Demo 🚀';
+const APP_VERSION = process.env.APP_VERSION || '3.0.0';
+const APP_MESSAGE = process.env.APP_MESSAGE || 'Version 3 - Live CI/CD Demo! 🎬';
 
 let visitorCount = 0;
 
