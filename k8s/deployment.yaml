@@ -23,9 +23,9 @@ spec:
             - containerPort: 3000
           env:
             - name: APP_VERSION
-              value: "3.0.0"
+              value: "2.0.0"
             - name: APP_MESSAGE
-              value: "Version 3 - Live CI/CD Demo! 🎬"
+              value: "Version 2 - Deployed via GitHub Actions CI/CD!"
           readinessProbe:
             httpGet:
               path: /health
