@@ -74,6 +74,12 @@ jobs:
               --docker-server=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com \
               --docker-username=AWS \
               --docker-password=$(aws ecr get-login-password --region $AWS_REGION)
+            if [ ! -d ~/devops-app ]; then
+              git clone https://github.com/MAliZia1/devops-nodejs-k8s-cicd.git ~/devops-app
+            else
+              git -C ~/devops-app pull
+            fi
+            kubectl apply -f ~/devops-app/k8s/
             kubectl -n $K8S_NAMESPACE rollout restart deployment/$K8S_DEPLOYMENT_NAME
             kubectl -n $K8S_NAMESPACE rollout status deployment/$K8S_DEPLOYMENT_NAME
             pkill -f "kubectl port-forward --address 0.0.0.0 service/$SERVICE_NAME $NODE_PORT:80" || true
